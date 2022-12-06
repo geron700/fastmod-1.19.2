@@ -22,6 +22,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DALIBOR_BLOCK = registerBlock("dalibor_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).instabreak()), ModCreativeModeTab.FASTMOD_TAB);
+    public static final RegistryObject<Block> ARON_BLOCK = registerBlock("aron_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)), ModCreativeModeTab.FASTMOD_TAB);
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name,toReturn,tab);
