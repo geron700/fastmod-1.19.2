@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#b#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "b": {
+      "item": "minecraft:bamboo"
+    }
+  },
+  "result": {
+    "item": "fastmod:dalibor_block"
+  }
+}
