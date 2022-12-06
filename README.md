@@ -1,6 +1,6 @@
 # fastmod-1.19.2
 ## About
-A modpack that includes 1 Dalibor
+A modpack that includes one (1) Dalibor.
 ## Includes
 ### Items:
 #### Dalibor
