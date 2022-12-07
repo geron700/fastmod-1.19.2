@@ -24,7 +24,7 @@ public class EightBallItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if(!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
             outputRandomNumber(player);
-            playSoundOnUse(player);
+            //player.playsound(player.getLocation(), Sound.NOTE_BASS, 1f, 1f);
             player.getCooldowns().addCooldown(this,20);
         }
 
@@ -36,11 +36,6 @@ public class EightBallItem extends Item {
     }
     private int getRandomNumber() {
         return RandomSource.createNewThreadLocalInstance().nextInt(10);
-    }
-
-    private void playSoundOnUse(Player player) {
-        //player.playsound(player.getLocation(), Sound.NOTE_BASS, 1f, 1f);
-        player.playSound(SoundEvents.FIREWORK_ROCKET_TWINKLE);
     }
 }
 
