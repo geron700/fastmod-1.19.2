@@ -1,12 +1,14 @@
 {
-  //basic
+
   "item.fastmod.dalibor": "Dalibor",
-  //custom
+
   "item.fastmod.eight_ball": "Eight Ball",
   "item.fastmod.fire_wand": "Wand of Fire",
-  //block
+
   "block.fastmod.dalibor_block": "Block of Dalibor",
   "block.fastmod.aron_block": "Block of Aron",
-  //tab
+
+  "block.fastmod.jumpy_block": "JUMP hayia",
+
   "itemGroup.fastmodtab": "Fastmod"
 }

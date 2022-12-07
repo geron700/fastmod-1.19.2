@@ -24,7 +24,7 @@ public class EightBallItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if(!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
             outputRandomNumber(player);
-            //player.playsound(player.getLocation(), Sound.NOTE_BASS, 1f, 1f);
+            //player.playSound(player.getLocation(), Sound.NOTE_BASS, 1f, 1f);
             player.getCooldowns().addCooldown(this,20);
         }
 

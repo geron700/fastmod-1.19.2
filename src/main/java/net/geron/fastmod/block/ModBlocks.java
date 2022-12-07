@@ -1,5 +1,6 @@
 package net.geron.fastmod.block;
 
+import net.geron.fastmod.block.custom.JumpyBlock;
 import net.geron.fastmod.fastmod;
 import net.geron.fastmod.item.ModCreativeModeTab;
 import net.geron.fastmod.item.ModItems;
@@ -28,6 +29,9 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops(),
                     UniformInt.of(3,7)), ModCreativeModeTab.FASTMOD_TAB);
+
+    public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.NETHER_WOOD)), ModCreativeModeTab.FASTMOD_TAB);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

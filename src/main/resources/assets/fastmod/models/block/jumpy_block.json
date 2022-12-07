@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "particle": "block/jumpy_side",
+    "up": "fastmod:block/jumpy_top",
+    "down": "fastmod:block/jumpy_side",
+    "south": "fastmod:block/jumpy_side",
+    "north": "fastmod:block/jumpy_side",
+    "west": "fastmod:block/jumpy_side",
+    "east": "fastmod:block/jumpy_side"
+  }
+}
