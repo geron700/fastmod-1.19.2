@@ -1,9 +1,13 @@
 package net.geron.fastmod.item;
 
+import net.geron.fastmod.block.ModBlocks;
 import net.geron.fastmod.fastmod;
 import net.geron.fastmod.item.custom.EightBallItem;
 import net.geron.fastmod.item.custom.FireWandItem;
+import net.geron.fastmod.item.custom.TestItem;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,6 +24,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> FIRE_WAND = ITEMS.register("fire_wand",
             () -> new FireWandItem(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item",
+            () -> new TestItem(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> BRAMBORINKY_SEEDS = ITEMS.register("bramborinky_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.BRAMBORINKY_CROP.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB)));
+    public static final RegistryObject<Item> BRAMBORINKY = ITEMS.register("bramborinky",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB)
+                    .food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

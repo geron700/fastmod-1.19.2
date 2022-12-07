@@ -2,6 +2,8 @@ package net.geron.fastmod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffect;
@@ -23,9 +25,13 @@ public class JumpyBlock extends Block {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos blockPos, Player player,
                                  InteractionHand hand, BlockHitResult blockHitResult) {
-        if(!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
-            player.sendSystemMessage(Component.literal("Click Click!"));
+        if(hand == InteractionHand.MAIN_HAND) {
+            if(!level.isClientSide()) {
+                player.sendSystemMessage(Component.literal("Click Click!"));
+            }
+            level.playSound(player,blockPos, SoundEvents.ANVIL_FALL, SoundSource.BLOCKS,1,1);
         }
+
         return super.use(state, level, blockPos, player, hand, blockHitResult);
     }
 
@@ -36,4 +42,6 @@ public class JumpyBlock extends Block {
         }
         super.stepOn(level, pos, state, entity);
     }
+
+
 }

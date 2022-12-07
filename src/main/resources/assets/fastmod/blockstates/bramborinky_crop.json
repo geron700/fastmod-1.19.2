@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "age=0": { "model": "fastmod:block/bramborinky_stage0" },
+    "age=1": { "model": "fastmod:block/bramborinky_stage1" },
+    "age=2": { "model": "fastmod:block/bramborinky_stage2" },
+    "age=3": { "model": "fastmod:block/bramborinky_stage3" },
+    "age=4": { "model": "fastmod:block/bramborinky_stage4" },
+    "age=5": { "model": "fastmod:block/bramborinky_stage5" },
+    "age=6": { "model": "fastmod:block/bramborinky_stage6" }
+  }
+}

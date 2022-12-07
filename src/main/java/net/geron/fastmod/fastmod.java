@@ -3,7 +3,6 @@ package net.geron.fastmod;
 import com.mojang.logging.LogUtils;
 import net.geron.fastmod.block.ModBlocks;
 import net.geron.fastmod.item.ModItems;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +18,7 @@ public class fastmod {
     public static final String MOD_ID = "fastmod";
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    // Very Important Comment
     public fastmod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -26,17 +26,19 @@ public class fastmod {
         ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+
     }
+
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
         }
     }
 }

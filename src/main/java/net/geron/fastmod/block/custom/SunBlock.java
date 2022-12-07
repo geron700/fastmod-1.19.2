@@ -1,10 +1,13 @@
 package net.geron.fastmod.block.custom;
 
+import net.geron.fastmod.item.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -24,6 +27,12 @@ public class SunBlock extends Block {
                                  Player player,InteractionHand hand, BlockHitResult blockHitResult) {
         if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
             level.setBlock(blockPos, blockState.cycle(LIT),3);
+        }
+        if (player.isHolding(Items.CARROT) && !level.isClientSide()) {
+            player.sendSystemMessage(Component.literal("amogus"));
+        }
+        if (player.isHolding(ModItems.TEST_ITEM.get()) && !level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
+            player.sendSystemMessage(Component.literal("sus"));
         }
         return super.use(blockState, level, blockPos, player, hand, blockHitResult);
     }

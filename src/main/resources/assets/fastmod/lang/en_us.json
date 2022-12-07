@@ -1,15 +1,19 @@
 {
 
   "item.fastmod.dalibor": "Dalibor",
+  "item.fastmod.bramborinky": "ZlatoCropka",
+  "item.fastmod.bramborinky_seeds": "ZlatoCropka Seeds",
 
   "item.fastmod.eight_ball": "Eight Ball",
   "item.fastmod.fire_wand": "Wand of Fire",
+  "item.fastmod.test_item": "Test Item",
 
   "block.fastmod.dalibor_block": "Block of Dalibor",
   "block.fastmod.aron_block": "Block of Aron",
 
   "block.fastmod.jumpy_block": "JUMP hayia",
   "block.fastmod.sun_block": "Sun Block",
+  "block.fastmod.bramborinky_crop": "ZlatoCropka Crop",
 
   "itemGroup.fastmodtab": "Fastmod"
 }

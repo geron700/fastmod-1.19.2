@@ -1,5 +1,6 @@
 package net.geron.fastmod.block;
 
+import net.geron.fastmod.block.custom.BramborinkyCropBlock;
 import net.geron.fastmod.block.custom.JumpyBlock;
 import net.geron.fastmod.block.custom.SunBlock;
 import net.geron.fastmod.fastmod;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -39,6 +41,8 @@ public class ModBlocks {
                         .lightLevel(state -> state.getValue(SunBlock.LIT) ? 15 : 0)), ModCreativeModeTab.FASTMOD_TAB);
                 //LightLayer.SKY
                 //.lightLevel(state -> state.getValue(SunBlock.LIT) ? 15 : 0)
+    public static final RegistryObject<Block> BRAMBORINKY_CROP = BLOCKS.register("bramborinky_crop",
+            () -> new BramborinkyCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name,toReturn,tab);
