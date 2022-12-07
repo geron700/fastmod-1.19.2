@@ -14,3 +14,5 @@ Pretty self explanatory
 ## Useful Links
 
 https://cs.wikipedia.org/wiki/Dalibor
+
+*disclaimer: most of the info might not be up to date
