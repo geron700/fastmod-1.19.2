@@ -3,6 +3,8 @@ package net.geron.fastmod.block.custom;
 import net.geron.fastmod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -25,14 +27,12 @@ public class SunBlock extends Block {
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos,
                                  Player player,InteractionHand hand, BlockHitResult blockHitResult) {
-        if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
-            level.setBlock(blockPos, blockState.cycle(LIT),3);
-        }
         if (player.isHolding(Items.CARROT) && !level.isClientSide()) {
-            player.sendSystemMessage(Component.literal("amogus"));
-        }
-        if (player.isHolding(ModItems.TEST_ITEM.get()) && !level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
-            player.sendSystemMessage(Component.literal("sus"));
+            player.sendSystemMessage(Component.literal("Put the carrot away!"));
+        } else if (player.isHolding(ModItems.TEST_ITEM.get()) && !level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
+            player.sendSystemMessage(Component.literal("I ain't testin anythin'..."));
+        } else if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
+            level.setBlock(blockPos, blockState.cycle(LIT),3);
         }
         return super.use(blockState, level, blockPos, player, hand, blockHitResult);
     }
@@ -41,6 +41,7 @@ public class SunBlock extends Block {
     public void onProjectileHit(Level level, BlockState blockState,
                                 BlockHitResult blockHitResult, Projectile projectile) {
         level.setBlock(blockHitResult.getBlockPos(),blockState.cycle(LIT),3);
+        projectile.playSound(SoundEvents.ARROW_HIT_PLAYER);
         super.onProjectileHit(level, blockState, blockHitResult, projectile);
     }
 

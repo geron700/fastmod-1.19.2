@@ -5,6 +5,8 @@ import net.geron.fastmod.fastmod;
 import net.geron.fastmod.item.custom.EightBallItem;
 import net.geron.fastmod.item.custom.FireWandItem;
 import net.geron.fastmod.item.custom.TestItem;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -39,7 +41,9 @@ public class ModItems {
     public static final RegistryObject<Item> ZLATOCROPKA = ITEMS.register("zlatocropka",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_CROPS_TAB)
                     .food(new FoodProperties.Builder().nutrition(1)
-                            .saturationMod(0.1f).fast().build())));
+                            .saturationMod(0.1f).fast()
+                            .effect(new MobEffectInstance(MobEffects.POISON, 40, 1), 1F)
+                            .build())));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

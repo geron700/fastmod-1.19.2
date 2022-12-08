@@ -40,4 +40,6 @@ public class FireWandItem extends Item {
 
         super.appendHoverText(itemStack, level, components, tooltipFlag);
     }
+
+
 }
