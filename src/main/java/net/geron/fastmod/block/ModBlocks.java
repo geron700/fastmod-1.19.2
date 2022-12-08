@@ -4,14 +4,13 @@ import net.geron.fastmod.block.custom.BramborinkyCropBlock;
 import net.geron.fastmod.block.custom.JumpyBlock;
 import net.geron.fastmod.block.custom.SunBlock;
 import net.geron.fastmod.block.custom.ZlatoCropkaBlock;
-import net.geron.fastmod.fastmod;
+import net.geron.fastmod.Fastmod;
 import net.geron.fastmod.item.ModCreativeModeTab;
 import net.geron.fastmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
@@ -26,7 +25,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, fastmod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, Fastmod.MOD_ID);
 
     public static final RegistryObject<Block> DALIBOR_BLOCK = registerBlock("dalibor_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).instabreak()), ModCreativeModeTab.FASTMOD_TAB);

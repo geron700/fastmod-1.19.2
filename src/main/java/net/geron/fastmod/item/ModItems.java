@@ -1,7 +1,7 @@
 package net.geron.fastmod.item;
 
 import net.geron.fastmod.block.ModBlocks;
-import net.geron.fastmod.fastmod;
+import net.geron.fastmod.Fastmod;
 import net.geron.fastmod.item.custom.EightBallItem;
 import net.geron.fastmod.item.custom.FireWandItem;
 import net.geron.fastmod.item.custom.TestItem;
@@ -17,7 +17,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, fastmod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, Fastmod.MOD_ID);
 
     public static final RegistryObject<Item> DALIBOR = ITEMS.register("dalibor",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB)));

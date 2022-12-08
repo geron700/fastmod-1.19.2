@@ -29,7 +29,7 @@ public class JumpyBlock extends Block {
             if(!level.isClientSide()) {
                 player.sendSystemMessage(Component.literal("Click Click!"));
             }
-            level.playSound(player,blockPos, SoundEvents.ANVIL_FALL, SoundSource.BLOCKS,1,1);
+            level.playSound(null, blockPos, SoundEvents.CAT_HISS, SoundSource.BLOCKS,1,1);
         }
 
         return super.use(state, level, blockPos, player, hand, blockHitResult);

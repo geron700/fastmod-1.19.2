@@ -17,6 +17,8 @@
   "block.fastmod.sun_block": "Sun Block",
   "block.fastmod.bramborinky_crop": "ZlatoCropka Crop",
 
+  "entity.minecraft.villager.fastmod.dalibor_kun": "Dalibor the Mathemathician",
+
   "itemGroup.fastmodtab": "Fastmod",
   "itemGroup.fastmodcropstab": "Fastmod Crops"
 }
