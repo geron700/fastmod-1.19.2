@@ -28,10 +28,18 @@ public class ModItems {
             () -> new TestItem(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB).stacksTo(1)));
     public static final RegistryObject<Item> BRAMBORINKY_SEEDS = ITEMS.register("bramborinky_seeds",
             () -> new ItemNameBlockItem(ModBlocks.BRAMBORINKY_CROP.get(),
-                    new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB)));
+                    new Item.Properties().tab(ModCreativeModeTab.FASTMOD_CROPS_TAB)));
     public static final RegistryObject<Item> BRAMBORINKY = ITEMS.register("bramborinky",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB)
-                    .food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_CROPS_TAB)
+                    .food(new FoodProperties.Builder().nutrition(3).saturationMod(3f).build())));
+
+    public static final RegistryObject<Item> ZLATOCROPKA_SEEDS = ITEMS.register("zlatocropka_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.ZLATOCROPKA_CROP.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.FASTMOD_CROPS_TAB)));
+    public static final RegistryObject<Item> ZLATOCROPKA = ITEMS.register("zlatocropka",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_CROPS_TAB)
+                    .food(new FoodProperties.Builder().nutrition(1)
+                            .saturationMod(0.1f).fast().build())));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

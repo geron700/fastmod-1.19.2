@@ -7,7 +7,13 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab FASTMOD_TAB = new CreativeModeTab("fastmodtab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.DALIBOR.get());
+            return new ItemStack(ModItems.TEST_ITEM.get());
+        }
+    };
+    public static final CreativeModeTab FASTMOD_CROPS_TAB = new CreativeModeTab("fastmodcropstab") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.ZLATOCROPKA_SEEDS.get());
         }
     };
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fastmod:zlatocropka"
+    }
+  },
+  "result": {
+    "count": 2,
+    "item": "minecraft:gold_ingot"
+  }
+}

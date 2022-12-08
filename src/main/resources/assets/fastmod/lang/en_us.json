@@ -1,8 +1,10 @@
 {
 
   "item.fastmod.dalibor": "Dalibor",
-  "item.fastmod.bramborinky": "ZlatoCropka",
-  "item.fastmod.bramborinky_seeds": "ZlatoCropka Seeds",
+  "item.fastmod.bramborinky": "Bramborinky",
+  "item.fastmod.bramborinky_seeds": "Bramborinky Seeds",
+  "item.fastmod.zlatocropka": "ZlatoCropka",
+  "item.fastmod.zlatocropka_seeds": "ZlatoCropka Seeds",
 
   "item.fastmod.eight_ball": "Eight Ball",
   "item.fastmod.fire_wand": "Wand of Fire",
@@ -15,5 +17,6 @@
   "block.fastmod.sun_block": "Sun Block",
   "block.fastmod.bramborinky_crop": "ZlatoCropka Crop",
 
-  "itemGroup.fastmodtab": "Fastmod"
+  "itemGroup.fastmodtab": "Fastmod",
+  "itemGroup.fastmodcropstab": "Fastmod Crops"
 }

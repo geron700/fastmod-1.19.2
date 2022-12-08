@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "fastmod:block/bramborinky_stage5"
+    "crop": "fastmod:block/zlatocropka_stage3"
   },
   "render_type": "cutout"
 }

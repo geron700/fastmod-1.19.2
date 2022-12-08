@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "fastmod:block/zlatocropka_stage0" },
+    "age=1": { "model": "fastmod:block/zlatocropka_stage1" },
+    "age=2": { "model": "fastmod:block/zlatocropka_stage2" },
+    "age=3": { "model": "fastmod:block/zlatocropka_stage3" },
+    "age=4": { "model": "fastmod:block/zlatocropka_stage4" },
+    "age=5": { "model": "fastmod:block/zlatocropka_stage5" },
+    "age=6": { "model": "fastmod:block/zlatocropka_stage6" },
+    "age=7": { "model": "fastmod:block/zlatocropka_stage7" }
+  }
+}
