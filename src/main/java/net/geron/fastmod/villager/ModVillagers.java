@@ -17,14 +17,14 @@ import java.lang.reflect.InvocationTargetException;
 public class ModVillagers {
     public static final DeferredRegister<PoiType> POI_TYPES =
             DeferredRegister.create(ForgeRegistries.POI_TYPES, Fastmod.MOD_ID);
-    public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSION_DEFERRED_REGISTER =
+    public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSION =
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, Fastmod.MOD_ID);
 
     public static final RegistryObject<PoiType> DALIBOR_BLOCK_POI = POI_TYPES.register("dalibor_block_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.DALIBOR_BLOCK.get().getStateDefinition().getPossibleStates()),
                     1,1));
 
-    public static final RegistryObject<VillagerProfession> DALIBOR_KUN = VILLAGER_PROFESSION_DEFERRED_REGISTER.register("dalibor_kun",
+    public static final RegistryObject<VillagerProfession> DALIBOR_KUN = VILLAGER_PROFESSION.register("dalibor_kun",
             () -> new VillagerProfession("dalibor_kun", x -> x.get() == DALIBOR_BLOCK_POI.get(),
                     x -> x.get() == DALIBOR_BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_CARTOGRAPHER));
@@ -40,6 +40,6 @@ public class ModVillagers {
 
     public static void register(IEventBus eventBus) {
         POI_TYPES.register(eventBus);
-        VILLAGER_PROFESSION_DEFERRED_REGISTER.register(eventBus);
+        VILLAGER_PROFESSION.register(eventBus);
     }
 }
