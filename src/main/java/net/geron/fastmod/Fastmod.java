@@ -5,6 +5,8 @@ import net.geron.fastmod.block.ModBlocks;
 import net.geron.fastmod.item.ModItems;
 import net.geron.fastmod.painting.ModPaintings;
 import net.geron.fastmod.villager.ModVillagers;
+import net.geron.fastmod.world.feature.ModConfiguredFeatures;
+import net.geron.fastmod.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -29,6 +31,9 @@ public class Fastmod {
 
         ModVillagers.register(modEventBus);
         ModPaintings.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
