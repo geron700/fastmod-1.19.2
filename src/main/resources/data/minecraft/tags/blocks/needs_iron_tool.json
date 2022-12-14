@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "fastmod:aron_block",
     "fastmod:magic_ore_block"
   ]
 }

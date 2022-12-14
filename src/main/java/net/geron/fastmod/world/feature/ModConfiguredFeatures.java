@@ -7,7 +7,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.OreFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,9 +22,13 @@ public class ModConfiguredFeatures {
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_ARON_BLOCKS = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ARON_BLOCK.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.ARON_BLOCK.get().defaultBlockState())));
-
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_MAGIC_ORE_BLOCKS = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.MAGIC_ORE_BLOCK.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.MAGIC_ORE_BLOCK.get().defaultBlockState())));
     public static final RegistryObject<ConfiguredFeature<?,?>> ARON_ORE = CONFIGURED_FEATURES.register("aron_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_ARON_BLOCKS.get(), 7)));
+    public static final RegistryObject<ConfiguredFeature<?,?>> MAGIC_ORE = CONFIGURED_FEATURES.register("magic_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_MAGIC_ORE_BLOCKS.get(), 9)));
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURES.register(eventBus);
     }

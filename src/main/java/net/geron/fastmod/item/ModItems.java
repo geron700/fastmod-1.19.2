@@ -21,6 +21,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> DALIBOR = ITEMS.register("dalibor",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB)));
+    public static final RegistryObject<Item> MAGIC_CRYSTAL = ITEMS.register("magic_crystal",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB)));
     public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
             () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.FASTMOD_TAB).stacksTo(1)));
 

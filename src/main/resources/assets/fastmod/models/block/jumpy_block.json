@@ -1,12 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube_top",
   "textures": {
-    "particle": "block/jumpy_side",
-    "up": "fastmod:block/jumpy_top",
-    "down": "fastmod:block/jumpy_side",
-    "south": "fastmod:block/jumpy_side",
-    "north": "fastmod:block/jumpy_side",
-    "west": "fastmod:block/jumpy_side",
-    "east": "fastmod:block/jumpy_side"
+    "side": "fastmod:block/jumpy_side",
+    "top": "fastmod:block/jumpy_top"
   }
 }

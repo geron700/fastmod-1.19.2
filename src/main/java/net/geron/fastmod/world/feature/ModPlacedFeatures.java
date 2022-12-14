@@ -18,6 +18,10 @@ public class ModPlacedFeatures {
             () -> new PlacedFeature(ModConfiguredFeatures.ARON_ORE.getHolder().get(),
                     commonOrePlacement(7,
                             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+    public static final RegistryObject<PlacedFeature> MAGIC_ORE_PLACED = PLACED_FEATURES.register("magic_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.MAGIC_ORE.getHolder().get(),
+                    commonOrePlacement(9,
+                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
     private static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());

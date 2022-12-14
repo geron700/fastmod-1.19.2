@@ -1,6 +1,7 @@
 {
 
   "item.fastmod.dalibor": "Dalibor",
+  "item.fastmod.magic_crystal": "Magic Crystal",
   "item.fastmod.bramborinky": "Bramborinky",
   "item.fastmod.bramborinky_seeds": "Bramborinky Seeds",
   "item.fastmod.zlatocropka": "ZlatoCropka",
@@ -12,12 +13,15 @@
 
   "block.fastmod.dalibor_block": "Block of Dalibor",
   "block.fastmod.aron_block": "Block of Aron",
+  "block.fastmod.magic_ore_block": "Magic Ore",
 
   "block.fastmod.jumpy_block": "JUMP hayia",
   "block.fastmod.sun_block": "Sun Block",
   "block.fastmod.bramborinky_crop": "ZlatoCropka Crop",
 
   "entity.minecraft.villager.fastmod.dalibor_kun": "Dalibor the Mathemathician",
+  "key.category.fastmod.tutorial": "Fastmod",
+  "key.fastmod.drink_water": "Drink Water Key",
 
   "itemGroup.fastmodtab": "Fastmod",
   "itemGroup.fastmodcropstab": "Fastmod Crops"
