@@ -23,6 +23,9 @@
   "key.category.fastmod.tutorial": "Fastmod",
   "key.fastmod.drink_water": "Drink Water Key",
 
+  "message.fastmod.drink_water": "Drinking water",
+  "message.fastmod.no_water": "No water nearby!",
+
   "itemGroup.fastmodtab": "Fastmod",
   "itemGroup.fastmodcropstab": "Fastmod Crops"
 }

@@ -1,6 +1,9 @@
 package net.geron.fastmod.event;
 
 import net.geron.fastmod.Fastmod;
+import net.geron.fastmod.networking.ModMessages;
+import net.geron.fastmod.networking.packet.DrinkWaterC2SPacket;
+import net.geron.fastmod.networking.packet.ExampleC2SPacket;
 import net.geron.fastmod.util.KeyBinding;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -16,7 +19,7 @@ public class ClientEvents {
         @SubscribeEvent
         public static void onKyeInput(InputEvent.Key event) {
             if (KeyBinding.DRINKING_KEY.consumeClick()) {
-                Minecraft.getInstance().player.sendSystemMessage(Component.literal("Pressed the key 'O'"));
+                ModMessages.sendToServer(new DrinkWaterC2SPacket());
             }
         }
     }

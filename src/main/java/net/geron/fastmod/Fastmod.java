@@ -3,6 +3,7 @@ package net.geron.fastmod;
 import com.mojang.logging.LogUtils;
 import net.geron.fastmod.block.ModBlocks;
 import net.geron.fastmod.item.ModItems;
+import net.geron.fastmod.networking.ModMessages;
 import net.geron.fastmod.painting.ModPaintings;
 import net.geron.fastmod.villager.ModVillagers;
 import net.geron.fastmod.world.feature.ModConfiguredFeatures;
@@ -42,6 +43,7 @@ public class Fastmod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+            ModMessages.register();
             ModVillagers.registerPOIs();
         });
     }
